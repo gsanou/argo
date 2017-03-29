@@ -68,7 +68,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Definition:** | An object property name P from S(O') has been used as part of an OWL axiom in O' but is neither built-in vocabulary nor has been declared. |
 | **Recognition:** | For all object properties P in S(O'), P is considered undeclared if it is not built-in vocabulary and there exists no declaration axiom Declaration(P). |
 | **Repair:** | Inject an object property [declaration](https://www.w3.org/TR/owl2-syntax/#Entity_Declarations_and_Typing) axiom into the ontology. |
-| **Debate:** | See **use of undeclared class** |
+| **Debate:** | See [use of undeclared class](###-Use-of-undeclared-class) |
 | **OWL API:** | [UseOfUndeclaredObjectProperty](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUndeclaredObjectProperty.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
