@@ -27,6 +27,10 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **SA(O):** | The signature of O, i.e. the set of all class names, object property names, data property names, **annotation property names** and individual names occuring across **any** axiom in O. |
 ----
 
+# General points of discussions
+
+* Profile checking against O vs O'
+
 # General OWL 2 Violations
 
 ## OntologyIRINotAbsolute
@@ -49,11 +53,12 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 
 |  | Specification |
 |---|---|
-| **Definition:** | A class name A from S(O) has been used as part of an OWL axiom in O but has not been declared. |
-| **Recognition:** |  |
+| **Definition:** | A class name A from S(O') has been used as part of an OWL axiom in O' but has not been declared. |
+| **Recognition:** | For all classes A in S(O'), A is considered undeclared if it is not built-in vocabulary and there exists no declaration axiom Declaration(A). |
 | **Repair:** | Inject a class [declaration](https://www.w3.org/TR/owl2-syntax/#Entity_Declarations_and_Typing) axiom into the ontology. |
-| **Debate:** | Class names in annotations? S(O) vs S(O')? O or O'? |
+| **Debate:** | Class names in annotations? |
 | **OWL API:** | [UseOfUndeclaredClass](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUndeclaredClass.html) |
+| **OWL API Support:** | 4.3.1 |
 ----
 
 ### Use of undeclared object property
