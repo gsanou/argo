@@ -11,7 +11,7 @@ Nicolas Matentzoglu, Manchester University
 
 | Version | Date | Contributors | Changes |
 |---|---|---|---|
-| 0.0.1 | 29.03.2017 | Nicolas Matentzoglu | First version |
+| 0.0.1 | 29.03.2017 | Nicolas Matentzoglu | First version: reflecting the state of the OWL API 4.3.1. |
 ----
 
 # Summary 
@@ -28,6 +28,18 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 ----
 
 # General OWL 2 Violations
+
+## OntologyIRINotAbsolute
+
+## UseOfNonAbsoluteIRI
+
+## LexicalNotInLexicalSpace
+
+## UseOfDefinedDatatypeInDatatypeRestriction
+
+## UseOfIllegalFacetRestriction
+
+## UseOfUndeclaredDatatype
 
 # OWL 2 DL Violations
 
@@ -52,11 +64,65 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 
 ### Use of undeclared data type
 
+see General OWL 2 Violations
+
 ## Misuse of reserved vocabulary
+
+### UseOfReservedVocabularyForOntologyIRI
+
+### UseOfReservedVocabularyForVersionIRI
+
+### UseOfReservedVocabularyForClassIRI
+
+### UseOfReservedVocabularyForObjectPropertyIRI
+
+### UseOfReservedVocabularyForDataPropertyIRI
+
+### UseOfReservedVocabularyForAnnotationPropertyIRI
+
+### UseOfBuiltInDatatypeInDatatypeDefinition
+
+### UseOfReservedVocabularyForIndividualIRI
 
 ## Inherent Violation of OWL DL Profile
 
+### UseOfUnknownDatatype
+
+### DatatypeIRIAlsoUsedAsClassIRI
+
+### DatatypeIRIAlsoUsedAsClassIRI
+
+### CycleInDatatypeDefinition
+
+### IllegalPunning
+
+### UseOfTopDataPropertyAsSubPropertyInSubPropertyAxiom
+
+### UseOfNonSimplePropertyInCardinalityRestriction
+
+### UseOfNonSimplePropertyInObjectHasSelf
+
+### UseOfNonSimplePropertyInFunctionalPropertyAxiom
+
+### UseOfNonSimplePropertyInInverseFunctionalObjectPropertyAxiom
+
+### UseOfNonSimplePropertyInIrreflexivePropertyAxiom
+
+### UseOfNonSimplePropertyInAsymmetricObjectPropertyAxiom
+
+### UseOfNonSimplePropertyInDisjointPropertiesAxiom
+
+### UseOfPropertyInChainCausesCycle
+
 ## Syntax violations
+
+### EmptyOneOfAxiom
+
+### InsufficientOperands
+
+### InsufficientPropertyExpressions
+
+### InsufficientIndividuals
 
 # OWL 2 EL Violations
 
