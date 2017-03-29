@@ -1,7 +1,6 @@
-<header>
 ARGO – **G**uidelines for **a**utomatically recognising and **r**epairing **O**WL 2 profile violations
 ==============
-</header>
+
 ## Working draft 29 March 2017
 
 **Editors**:
