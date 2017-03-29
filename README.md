@@ -15,7 +15,13 @@ Nicolas Matentzoglu, Manchester University
 ----
 
 # Summary 
-This document contains the guidelines for recognising and repairing OWL 2 profile violations. The purpose is to determine through community discussion what constitutes a profile violation (definition), how to recognise it (recognition) and whether there should be an automated repair strategy (repair). One part of the definition of ARGO is to properly group the violations, which is also up for community discussion. The basic grouping, using the four main OWL 2 profiles (DL, EL, RL, QL) and general OWL 2 violations, serves to better localise the violations for those interested in one particular profile. It should be noted that, in order to be valid EL, RL and QL, the ontology needs to be valid OWL 2 DL. In order to be valid OWL 2 DL, the ontology needs to be valid OWL 2. We are working closely with the developers of the OWL API in order to provide a consistent and community-accredited implementation of the guidelines. 
+This document contains the guidelines for recognising and repairing OWL 2 profile violations. The goal is to determine through community discussion what constitutes a profile violation (definition), how to recognise it (recognition) and whether there should be an automated repair strategy (repair). The main purpose of the guidelines is to agree on a standard way on how to (automatically) repair ontologies in a safe way 
+
+* for consistent counting in ontology surveys
+* for improved tool testing for example when benchmarking reasoners
+* to discuss the various ambiguities around profile checking and resolve them
+
+The basic grouping, using the four main OWL 2 profiles (DL, EL, RL, QL) and general OWL 2 violations, is taken from the current OWL API version and serves to better localise the violations for those interested in one particular profile. It should be noted that, in order to be valid EL, RL and QL, the ontology needs to be valid OWL 2 DL. In order to be valid OWL 2 DL, the ontology needs to be valid OWL 2. We are working closely with the developers of the OWL API in order to provide a consistent and community-accredited implementation of the guidelines. 
 
 # Basic definitions
 
@@ -30,10 +36,11 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 # General points of discussions
 
 * Profile checking against O vs O'
+* Signature of interest includes annotations (class names in annotations, non OWL data types)
 
 # General OWL 2 Violations
 
-### OntologyIRINotAbsolute
+### Ontology IRI not absolute
 
 |  | Specification |
 |---|---|
@@ -45,7 +52,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **OWL API Support:** | 4.3.1 |
 ----
 
-### UseOfNonAbsoluteIRI
+### Use of non absolute IRI
 
 |  | Specification |
 |---|---|
@@ -53,11 +60,11 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonAbsoluteIRI](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonAbsoluteIRI.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
-### LexicalNotInLexicalSpace
+### Lexical not in lexical space
 
 |  | Specification |
 |---|---|
@@ -65,11 +72,11 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [LexicalNotInLexicalSpace](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/LexicalNotInLexicalSpace.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
-### UseOfDefinedDatatypeInDatatypeRestriction
+### Use of defined datatype in datatype restriction
 
 |  | Specification |
 |---|---|
@@ -77,11 +84,11 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfDefinedDatatypeInDatatypeRestriction](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfDefinedDatatypeInDatatypeRestriction.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
-### UseOfIllegalFacetRestriction
+### Use of illegal facet restriction
 
 |  | Specification |
 |---|---|
@@ -89,11 +96,11 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfIllegalFacetRestriction](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfIllegalFacetRestriction.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
-### UseOfUndeclaredDatatype
+### Use of undeclared datatype
 
 |  | Specification |
 |---|---|
@@ -101,7 +108,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfUndeclaredDatatype](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUndeclaredDatatype.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -173,7 +180,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 
 ## Misuse of reserved vocabulary
 
-### UseOfReservedVocabularyForOntologyIRI
+### Use of reserved vocabulary for ontology IRI
 
 |  | Specification |
 |---|---|
@@ -181,11 +188,11 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfReservedVocabularyForOntologyIRI](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfReservedVocabularyForOntologyIRI.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
-### UseOfReservedVocabularyForVersionIRI
+### Use of reserved vocabulary for version IRI
 
 |  | Specification |
 |---|---|
@@ -193,7 +200,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfReservedVocabularyForVersionIRI](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfReservedVocabularyForVersionIRI.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -205,7 +212,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfReservedVocabularyForClassIRI](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfReservedVocabularyForClassIRI.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -217,7 +224,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfReservedVocabularyForObjectPropertyIRI](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfReservedVocabularyForObjectPropertyIRI.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -229,7 +236,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfReservedVocabularyForDataPropertyIRI](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfReservedVocabularyForDataPropertyIRI.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -241,7 +248,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfReservedVocabularyForAnnotationPropertyIRI](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfReservedVocabularyForAnnotationPropertyIRI.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -253,7 +260,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfBuiltInDatatypeInDatatypeDefinition](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfBuiltInDatatypeInDatatypeDefinition.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -265,7 +272,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfReservedVocabularyForIndividualIRI](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfReservedVocabularyForIndividualIRI.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -279,7 +286,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfUnknownDatatype](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUnknownDatatype.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -291,7 +298,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [DatatypeIRIAlsoUsedAsClassIRI](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/DatatypeIRIAlsoUsedAsClassIRI.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -303,7 +310,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [DatatypeIRIAlsoUsedAsClassIRI](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/DatatypeIRIAlsoUsedAsClassIRI.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -315,7 +322,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [CycleInDatatypeDefinition](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/CycleInDatatypeDefinition.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -327,7 +334,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [IllegalPunning](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/IllegalPunning.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -339,7 +346,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfTopDataPropertyAsSubPropertyInSubPropertyAxiom](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfTopDataPropertyAsSubPropertyInSubPropertyAxiom.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -351,7 +358,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSimplePropertyInCardinalityRestriction](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSimplePropertyInCardinalityRestriction.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -363,7 +370,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSimplePropertyInObjectHasSelf](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSimplePropertyInObjectHasSelf.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -375,7 +382,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSimplePropertyInFunctionalPropertyAxiom](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSimplePropertyInFunctionalPropertyAxiom.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -387,7 +394,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSimplePropertyInInverseFunctionalObjectPropertyAxiom](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSimplePropertyInInverseFunctionalObjectPropertyAxiom.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -399,7 +406,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSimplePropertyInIrreflexivePropertyAxiom](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSimplePropertyInIrreflexivePropertyAxiom.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -411,7 +418,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSimplePropertyInAsymmetricObjectPropertyAxiom](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSimplePropertyInAsymmetricObjectPropertyAxiom.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -423,7 +430,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSimplePropertyInDisjointPropertiesAxiom](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSimplePropertyInDisjointPropertiesAxiom.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -435,21 +442,11 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfPropertyInChainCausesCycle](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfPropertyInChainCausesCycle.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
 ## Syntax violations
-
-|  | Specification |
-|---|---|
-| **Definition:** | Tbd. |
-| **Recognition:** | Tbd. |
-| **Repair:** | Tbd. |
-| **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
-| **OWL API Support:** | 4.3.1 |
-----
 
 ### EmptyOneOfAxiom
 
@@ -459,7 +456,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [EmptyOneOfAxiom](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/EmptyOneOfAxiom.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -471,7 +468,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [InsufficientOperands](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/InsufficientOperands.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -483,7 +480,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [InsufficientPropertyExpressions](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/InsufficientPropertyExpressions.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -495,7 +492,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [InsufficientIndividuals](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/InsufficientIndividuals.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -509,7 +506,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfIllegalDataRange](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfIllegalDataRange.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -521,7 +518,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfAnonymousIndividual](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfAnonymousIndividual.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -533,7 +530,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfObjectPropertyInverse](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfObjectPropertyInverse.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -545,7 +542,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfIllegalClassExpression](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfIllegalClassExpression.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -557,7 +554,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfIllegalDataRange](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfIllegalDataRange.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -569,7 +566,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfIllegalAxiom](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfIllegalAxiom.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -593,7 +590,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfObjectOneOfWithMultipleIndividuals](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfObjectOneOfWithMultipleIndividuals.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -605,7 +602,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [LastPropertyInChainNotInImposedRange](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/LastPropertyInChainNotInImposedRange.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -619,7 +616,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSubClassExpression](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSubClassExpression.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -631,7 +628,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSuperClassExpression](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSuperClassExpression.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -643,7 +640,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfIllegalAxiom](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfIllegalAxiom.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -655,7 +652,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonEquivalentClassExpression](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonEquivalentClassExpression.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -667,7 +664,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfIllegalDataRange](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfIllegalDataRange.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -681,7 +678,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfIllegalDataRange](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfIllegalDataRange.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -693,7 +690,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfAnonymousIndividual](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfAnonymousIndividual.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -705,7 +702,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfIllegalAxiom](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfIllegalAxiom.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -717,7 +714,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfIllegalDataRange](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfIllegalDataRange.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -729,7 +726,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSubClassExpression](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSubClassExpression.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -741,7 +738,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonSuperClassExpression](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonSuperClassExpression.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
 
@@ -753,6 +750,6 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Recognition:** | Tbd. |
 | **Repair:** | Tbd. |
 | **Debate:** | Tbd. |
-| **OWL API:** | [OntologyIRINotAbsolute](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/OntologyIRINotAbsolute.html) |
+| **OWL API:** | [UseOfNonAtomicClassExpression](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfNonAtomicClassExpression.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
