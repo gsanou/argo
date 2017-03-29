@@ -126,9 +126,48 @@ see General OWL 2 Violations
 
 # OWL 2 EL Violations
 
+### UseOfIllegalDataRange
+
+### UseOfAnonymousIndividual
+
+### UseOfObjectPropertyInverse
+
+### UseOfIllegalClassExpression
+
+### UseOfIllegalDataRange
+
+### UseOfIllegalAxiom
+
+### UseOfObjectOneOfWithMultipleIndividuals
+
+### UseOfDataOneOfWithMultipleLiterals
+
+### LastPropertyInChainNotInImposedRange
+
 # OWL 2 RL Violations
+
+### UseOfNonSubClassExpression
+
+### UseOfNonSuperClassExpression
+
+### UseOfIllegalAxiom
+
+### UseOfNonEquivalentClassExpression
+
+### UseOfIllegalDataRange
 
 # OWL 2 QL Violations
 
+### Use of illegal data range
 
+### UseOfAnonymousIndividual
 
+### UseOfIllegalAxiom
+
+### UseOfIllegalDataRange
+
+### UseOfNonSubClassExpression
+
+### UseOfNonSuperClassExpression
+
+### UseOfNonAtomicClassExpression
