@@ -1,4 +1,4 @@
-ARGO – **G**uidelines for **a**utomatically recognising and **r**epairing **O**WL 2 profile violations
+ARGO – Guidelines for Automatically recognising and Repairing OWL 2 profile violations
 ==============
 
 ## Working draft 29 March 2017
@@ -43,6 +43,20 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Debate:** | Class names in annotations? S(O) vs S(O')? O or O'? |
 | **OWL API:** | [UseOfUndeclaredClass](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUndeclaredClass.html) |
 ----
+
+### Use of undeclared object property
+
+### Use of undeclared data property
+
+### Use of undeclared annotation property
+
+### Use of undeclared data type
+
+## Misuse of reserved vocabulary
+
+## Inherent Violation of OWL DL Profile
+
+## Syntax violations
 
 # OWL 2 EL Violations
 
