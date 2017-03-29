@@ -53,7 +53,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 
 |  | Specification |
 |---|---|
-| **Definition:** | A class name A from S(O') has been used as part of an OWL axiom in O' but has not been declared. |
+| **Definition:** | A class name A from S(O') has been used as part of an OWL axiom in O' but is neither built-in vocabulary nor has been declared. |
 | **Recognition:** | For all classes A in S(O'), A is considered undeclared if it is not built-in vocabulary and there exists no declaration axiom Declaration(A). |
 | **Repair:** | Inject a class [declaration](https://www.w3.org/TR/owl2-syntax/#Entity_Declarations_and_Typing) axiom into the ontology. |
 | **Debate:** | Class names in annotations? |
@@ -63,9 +63,42 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 
 ### Use of undeclared object property
 
+|  | Specification |
+|---|---|
+| **Definition:** | An object property name P from S(O') has been used as part of an OWL axiom in O' but is neither built-in vocabulary nor has been declared. |
+| **Recognition:** | For all object properties P in S(O'), P is considered undeclared if it is not built-in vocabulary and there exists no declaration axiom Declaration(P). |
+| **Repair:** | Inject an object property [declaration](https://www.w3.org/TR/owl2-syntax/#Entity_Declarations_and_Typing) axiom into the ontology. |
+| **Debate:** | See **use of undeclared class** |
+| **OWL API:** | [UseOfUndeclaredObjectProperty](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUndeclaredObjectProperty.html) |
+| **OWL API Support:** | 4.3.1 |
+----
+
+
 ### Use of undeclared data property
 
+|  | Specification |
+|---|---|
+| **Definition:** | A data property name P from S(O') has been used as part of an OWL axiom in O' but is neither built-in vocabulary nor has been declared. |
+| **Recognition:** | For all data properties P in S(O'), P is considered undeclared if it is not built-in vocabulary and there exists no declaration axiom Declaration(P). |
+| **Repair:** | Inject an data property [declaration](https://www.w3.org/TR/owl2-syntax/#Entity_Declarations_and_Typing) axiom into the ontology. |
+| **Debate:** | See **use of undeclared class** |
+| **OWL API:** | [UseOfUndeclaredDataProperty](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUndeclaredDataProperty.html) |
+| **OWL API Support:** | 4.3.1 |
+----
+
+
 ### Use of undeclared annotation property
+
+|  | Specification |
+|---|---|
+| **Definition:** | An annotation property name P from S(O') has been used as part of an OWL axiom in O' but is neither built-in vocabulary nor has been declared. |
+| **Recognition:** | For all annotation properties P in S(O'), P is considered undeclared if it is not built-in vocabulary and there exists no declaration axiom Declaration(P). |
+| **Repair:** | Inject an annotation property [declaration](https://www.w3.org/TR/owl2-syntax/#Entity_Declarations_and_Typing) axiom into the ontology. |
+| **Debate:** | See **use of undeclared class** |
+| **OWL API:** | [UseOfUndeclaredAnnotationProperty](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUndeclaredAnnotationProperty.html) |
+| **OWL API Support:** | 4.3.1 |
+----
+
 
 ### Use of undeclared data type
 
