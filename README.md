@@ -39,7 +39,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 |---|---|
 | **Definition:** | A class name A from S(O) has been used as part of an OWL axiom in O but has not been declared. |
 | **Recognition:** |  |
-| **Repair:** | Gene Ontology (GO), v2.13; Foundational Model of Anatomy Ontology (FMA), v4.22; |
+| **Repair:** | Inject a class [declaration](https://www.w3.org/TR/owl2-syntax/#Entity_Declarations_and_Typing) axiom into the ontology. |
 | **Debate:** | Class names in annotations? S(O) vs S(O')? O or O'? |
 | **OWL API:** | [UseOfUndeclaredClass](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUndeclaredClass.html) |
 ----
