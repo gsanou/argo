@@ -56,7 +56,7 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Definition:** | A class name A from S(O') has been used as part of an OWL axiom in O' but is neither built-in vocabulary nor has been declared. |
 | **Recognition:** | For all classes A in S(O'), A is considered undeclared if it is not built-in vocabulary and there exists no declaration axiom Declaration(A). |
 | **Repair:** | Inject a class [declaration](https://www.w3.org/TR/owl2-syntax/#Entity_Declarations_and_Typing) axiom into the ontology. |
-| **Debate:** | Class names in annotations? |
+| **Debate:** | [Enity names in annotations?](https://github.com/owlcs/argo/issues/1) |
 | **OWL API:** | [UseOfUndeclaredClass](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUndeclaredClass.html) |
 | **OWL API Support:** | 4.3.1 |
 ----
