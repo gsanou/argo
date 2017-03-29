@@ -15,7 +15,7 @@ Nicolas Matentzoglu, Manchester University
 ----
 
 # Summary 
-This document contains the guidelines for recognising and repairing OWL 2 profile violations. The purpose is to determine through community discussion what constitutes a profile violation (definition), how to recognise it (recognition) and whether there should be an automated repair strategy (repair). One part of the definition of ARGO is to properly group the violations, which is also up for discussion. We are working closely with the developers of the OWL API in order to provide a consistent and community-accredited implementation of the guidelines.
+This document contains the guidelines for recognising and repairing OWL 2 profile violations. The purpose is to determine through community discussion what constitutes a profile violation (definition), how to recognise it (recognition) and whether there should be an automated repair strategy (repair). One part of the definition of ARGO is to properly group the violations, which is also up for community discussion. The basic grouping, using the four main OWL 2 profiles (DL, EL, RL, QL) and general OWL 2 violations, serves to better localise the violations for those interested in one particular profile. It should be noted that, in order to be valid EL, RL and QL, the ontology needs to be valid OWL 2 DL. In order to be valid OWL 2 DL, the ontology needs to be valid OWL 2. We are working closely with the developers of the OWL API in order to provide a consistent and community-accredited implementation of the guidelines. 
 
 # Basic definitions
 
@@ -27,9 +27,9 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **SA(O):** | The signature of O, i.e. the set of all class names, object property names, data property names, **annotation property names** and individual names occuring across **any** axiom in O. |
 ----
 
+# General OWL 2 Violations
 
-# Guidelines
-
+# OWL 2 DL Violations
 
 ## Declaration Failure
 
@@ -43,3 +43,12 @@ This document contains the guidelines for recognising and repairing OWL 2 profil
 | **Debate:** | Class names in annotations? S(O) vs S(O')? O or O'? |
 | **OWL API:** | [UseOfUndeclaredClass](http://owlcs.github.io/owlapi/apidocs_5/org/semanticweb/owlapi/profiles/violations/UseOfUndeclaredClass.html) |
 ----
+
+# OWL 2 EL Violations
+
+# OWL 2 RL Violations
+
+# OWL 2 QL Violations
+
+
+
